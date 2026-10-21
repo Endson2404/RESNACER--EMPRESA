@@ -1,0 +1,329 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  min-height: 76px;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #142b52;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #168bfa;
+  margin-left: 5px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a {
+  color: #39445a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: #168bfa;
+}
+
+.botao-menu {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #142b52;
+}
+
+/* PRIMEIRA SEÇÃO */
+.hero {
+  min-height: 510px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: linear-gradient(120deg, #10254a, #1769aa);
+}
+
+.hero-conteudo {
+  max-width: 700px;
+}
+
+.etiqueta {
+  color: #168bfa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero .etiqueta {
+  color: #9bd2ff;
+}
+
+.hero h1 {
+  max-width: 680px;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.hero-texto {
+  max-width: 560px;
+  color: #dce8f8;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+/* BOTÕES */
+.botao {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+}
+
+.botao-principal {
+  color: #ffffff;
+  background: #168bfa;
+}
+
+.botao-principal:hover {
+  background: #0875d8;
+}
+
+/* SEÇÕES */
+.secao {
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.secao h2,
+.contato h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.8px;
+}
+
+.descricao {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #657087;
+  font-size: 17px;
+}
+
+.destaques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.destaques div {
+  padding: 24px 16px;
+  background: #f4f7fb;
+  border-radius: 12px;
+}
+
+.destaques strong,
+.destaques span {
+  display: block;
+}
+
+.destaques strong {
+  color: #142b52;
+  margin-bottom: 8px;
+}
+
+.destaques span {
+  color: #657087;
+  font-size: 14px;
+}
+
+/* SERVIÇOS */
+.servicos {
+  background: #f4f7fb;
+}
+
+.grade-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 42px;
+  text-align: left;
+}
+
+.cartao {
+  padding: 30px 24px;
+  background: #ffffff;
+  border: 1px solid #e7edf5;
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(20, 43, 82, 0.08);
+}
+
+.icone {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  background: #e6f3ff;
+  color: #0875d8;
+  font-size: 27px;
+}
+
+.cartao h3 {
+  margin-bottom: 12px;
+  color: #142b52;
+  font-size: 20px;
+}
+
+.cartao p {
+  color: #657087;
+  font-size: 15px;
+}
+
+/* CONTATO */
+.contato {
+  padding: 85px 8%;
+  text-align: center;
+  color: #ffffff;
+  background: #142b52;
+}
+
+.contato .etiqueta {
+  color: #9bd2ff;
+}
+
+.contato > p:not(.etiqueta):not(.aviso) {
+  color: #dce8f8;
+  margin: 0 auto 28px;
+}
+
+.botao-claro {
+  color: #142b52;
+  background: #ffffff;
+}
+
+.botao-claro:hover {
+  background: #e6f3ff;
+}
+
+.aviso {
+  margin-top: 18px;
+  color: #c6d5e9;
+  font-size: 12px;
+}
+
+/* RODAPÉ */
+.rodape {
+  padding: 24px 8%;
+  text-align: center;
+  color: #657087;
+  font-size: 13px;
+  background: #ffffff;
+}
+
+/* CELULARES E TELAS MENORES */
+@media (max-width: 760px) {
+  .cabecalho {
+    padding: 16px 5%;
+  }
+
+  .botao-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 75px 6%;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .hero-texto {
+    font-size: 16px;
+  }
+
+  .secao,
+  .contato {
+    padding: 65px 6%;
+  }
+
+  .destaques,
+  .grade-servicos {
+    grid-template-columns: 1fr;
+  }
+}
